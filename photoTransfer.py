@@ -9,7 +9,6 @@ def main():
    if (len(sys.argv)!= 3):
       print("Two arguments must be provided, the directory of the camera, and the directory to store the photos in")
       sys.exit(0)
-      
 
    # Get the location of the camera's pictures and the location of where the files should be stored.
    cameraLocation = sys.argv[1]
@@ -24,7 +23,7 @@ def main():
       print("Can't find the directory to store files in")
       sys.exit(0)
 
-   # Now iterate over the files in the camera and move them to the storage directory
+   # Iterate over the files in the camera and move them to the storage directory
    for (dirpath, dirnames, filenames) in walk(cameraLocation):
       for fileName in filenames:
          # Get the time that the picture was taken at
